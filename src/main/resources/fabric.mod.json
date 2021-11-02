@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "fabricblockunderfastminecart",
+  "version": "${version}",
+
+  "name": "Fabric Block Under Faster Minecarts",
+  "description": "Increases the speed of minecarts based on config of which block the powered rail is on",
+  "authors": [
+    "ndrp",
+    "falconjh"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "GNU GPL3",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.falconjh.FabricBlockUnderFastMinecart.FabricBlockUnderFastMinecart"
+    ]
+  },
+  "mixins": [
+    "FabricBlockUnderFastMinecart.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "java": ">=16",
+    "minecraft": "1.17.x"
+  }
+}
