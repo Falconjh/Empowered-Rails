@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.github.falconjh.FabricBlockUnderFastMinecart.mixin",
+  "package": "com.github.falconjh.EmpoweredRails.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
   	"AbstractMinecartEntityMixin",

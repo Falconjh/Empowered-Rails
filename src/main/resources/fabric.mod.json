@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "fabricblockunderfastminecart",
+  "id": "EmpoweredRails",
   "version": "${version}",
 
   "name": "Fabric Block Under Faster Minecarts",
@@ -20,11 +20,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.falconjh.FabricBlockUnderFastMinecart.FabricBlockUnderFastMinecart"
+      "com.github.falconjh.EmpoweredRails.EmpoweredRails"
     ]
   },
   "mixins": [
-    "FabricBlockUnderFastMinecart.mixins.json"
+    "EmpoweredRails.mixins.json"
   ],
 
   "depends": {

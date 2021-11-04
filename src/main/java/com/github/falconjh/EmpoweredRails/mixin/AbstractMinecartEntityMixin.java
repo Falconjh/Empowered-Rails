@@ -1,4 +1,4 @@
-package com.github.falconjh.FabricBlockUnderFastMinecart.mixin;
+package com.github.falconjh.EmpoweredRails.mixin;
 
 import net.minecraft.block.AbstractRailBlock;
 import net.minecraft.block.Block;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.github.falconjh.FabricBlockUnderFastMinecart.FabricBlockUnderFastMinecart.config;
+import static com.github.falconjh.EmpoweredRails.EmpoweredRails.config;
 
 @Mixin(AbstractMinecartEntity.class)
 public abstract class AbstractMinecartEntityMixin extends Entity {

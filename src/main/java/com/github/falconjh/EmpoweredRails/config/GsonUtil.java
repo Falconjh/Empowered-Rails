@@ -1,4 +1,4 @@
-package com.github.falconjh.FabricBlockUnderFastMinecart.config;
+package com.github.falconjh.EmpoweredRails.config;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
@@ -11,7 +11,7 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import com.google.gson.reflect.TypeToken;
 import org.apache.commons.lang3.CharSet;
-import com.github.falconjh.FabricBlockUnderFastMinecart.FabricBlockUnderFastMinecart;
+import com.github.falconjh.EmpoweredRails.EmpoweredRails;
 import org.apache.logging.log4j.Logger;
 
 public class GsonUtil {
@@ -29,7 +29,7 @@ public class GsonUtil {
             //reading
             return (T) Serializer.fromJson(FileUtils.readFileToString(configfile.toFile(),(String)null), type);
         } catch (JsonSyntaxException | IOException e) {
-            FabricBlockUnderFastMinecart.LOGGER.error(e);
+            EmpoweredRails.LOGGER.error(e);
         }
         return null;
     }
@@ -40,7 +40,7 @@ public class GsonUtil {
             FileUtils.write(configfile.toFile(), Serializer.toJson(defaults), (String) null);
             return true;
         } catch (IOException e) {
-            FabricBlockUnderFastMinecart.LOGGER.error(e);
+            EmpoweredRails.LOGGER.error(e);
             return false;
         }
     }
