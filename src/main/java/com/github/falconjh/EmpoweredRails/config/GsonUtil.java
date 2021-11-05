@@ -13,11 +13,12 @@ import com.google.gson.reflect.TypeToken;
 import org.apache.commons.lang3.CharSet;
 import com.github.falconjh.EmpoweredRails.EmpoweredRails;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
 public class GsonUtil {
     public static final Gson Serializer = new GsonBuilder().setPrettyPrinting().create();
 
-    @SuppressWarnings("unchecked")
+    @Nullable
     public static <T> T getcreateConfigFile(Path configfile, T defaults, Type type){
         if(!configfile.toFile().exists())
         {
@@ -27,14 +28,14 @@ public class GsonUtil {
         try
         {
             //reading
-            return (T) Serializer.fromJson(FileUtils.readFileToString(configfile.toFile(),(String)null), type);
+            return Serializer.fromJson(FileUtils.readFileToString(configfile.toFile(),(String)null), type);
         } catch (JsonSyntaxException | IOException e) {
             EmpoweredRails.LOGGER.error(e);
         }
         return null;
     }
 
-    protected static boolean writeFile(Path configfile, Object defaults)
+    public static boolean writeFile(Path configfile, Object defaults)
     {
         try{
             FileUtils.write(configfile.toFile(), Serializer.toJson(defaults), (String) null);
