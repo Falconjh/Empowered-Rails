@@ -16,8 +16,11 @@ Derailment is an option; set the config to have slow down blocks accordingly.
 Config is json with "minecraft:< Block id >" : Max Speed. 
 
 Commands:
+
 /empoweredrails set <block> <speed> - set or change the max speed of a block type.
+  
 /empoweredrails reload - reloads the config file, overwrites any changes set. ToDo: verify this is true if a block is added by set rather than just replaced.
+  
 /empoweredrails save - saves the current settings of blocks/speeds to the config file. 
 
 ---
